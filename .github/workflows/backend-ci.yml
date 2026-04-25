@@ -37,5 +37,5 @@ jobs:
     - name: Docker İmajını Oluştur ve Yükle
       # "seninkullaniciadin/imajadi:latest" yapısını kendi bilgilerine göre düzenleyebilirsin
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/finn360-backend:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/finn360-backend:latest -t ${{ secrets.DOCKER_USERNAME }}/finn360-backend:${{ github.sha }} .
         docker push ${{ secrets.DOCKER_USERNAME }}/finn360-backend:latest
