@@ -1,0 +1,32 @@
+name: Finn360 Backend CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+    # SADECE backend klasöründe bir değişiklik olursa bu pipeline çalışır.
+    # Mobil tarafta yaptığın değişiklikler boşuna sunucu derlemesi başlatmaz.
+    paths:
+      - 'backend/**' 
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    # Tüm "run" komutlarının varsayılan olarak bu klasörde çalışmasını sağlar
+    defaults:
+      run:
+        working-directory: ./backend
+
+    steps:
+    - name: Kodu Çek
+      uses: actions/checkout@v4
+
+    - name: Java JDK 17 Kurulumu
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Maven ile Derle ve Test Et
+      run: mvn clean verify
