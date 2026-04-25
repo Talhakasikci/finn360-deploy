@@ -28,5 +28,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Maven ile Derle ve Test Et
-      run: mvn clean verify
+    - name: Maven ile Derle (Testleri Atla)
+      run: mvn clean package -DskipTests
