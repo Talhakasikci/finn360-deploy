@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#006B54</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#80F9D6</color>
+    <color name="colorOnPrimaryContainer">#002018</color>
+    <color name="colorSecondary">#4B635A</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSecondaryContainer">#CDE9DD</color>
+    <color name="colorOnSecondaryContainer">#082019</color>
+    <color name="colorTertiary">#426277</color>
+    <color name="colorOnTertiary">#FFFFFF</color>
+    <color name="colorTertiaryContainer">#C5E7FF</color>
+    <color name="colorOnTertiaryContainer">#001E2E</color>
+    <color name="colorError">#BA1A1A</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorErrorContainer">#FFDAD6</color>
+    <color name="colorOnErrorContainer">#410002</color>
+
+    <color name="colorBackground">#F8FBFA</color>
+    <color name="colorOnBackground">#191C1B</color>
+    <color name="colorSurface">#F8FBFA</color>
+    <color name="colorOnSurface">#191C1B</color>
+    <color name="colorSurfaceVariant">#DBE5E0</color>
+    <color name="colorOnSurfaceVariant">#404945</color>
+    <color name="colorOutline">#707975</color>
+    <color name="colorSurfaceInverse">#2D3130</color>
+    <color name="colorOnSurfaceInverse">#F0F1EF</color>
+
+    <color name="colorSuccess">#059669</color>
+    <color name="colorWarning">#D97706</color>
+    <color name="colorInfo">#2563EB</color>
+
+    <color name = "green_positive_color">#00C853</color>
+    <color name = "red_negative_color">#FF5252</color>
+</resources>
+

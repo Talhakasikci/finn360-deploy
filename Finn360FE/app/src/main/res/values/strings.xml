@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Finn360FE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in_header">Welcome to the Finn360</string>
+    <string name="sign_in_guidance">Sign in to your account</string>
+    <string name="email_hint">Enter your email\n</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="sign_in_continue">Continue</string>
+    <string name="sign_in_or">OR</string>
+    <string name="sign_in_with_google">Continue with Google</string>
+    <string name="say_create_an_account">If you don\'t have an account</string>
+    <string name="sign_in_register_button">Sign Up</string>
+    <string name="register_continue">Continue</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="surname_hint">Enter your surname</string>
+    <string name="sign_up_guidance">Create you account</string>
+    <string name="main_fragment_welcome_user_text">Merhaba,</string>
+    <string name="date_">12/08, Friday</string>
+    <string name="date_today">12/08, Friday</string>
+    <string name="main_fragment_wathclist_title">Watch List</string>
+    <string name="homePage">Home Page</string>
+    <string name="portfolio_bottom_navigation">My Portfolio</string>
+    <string name="portfolio_fragment_total_amount">"Total Amount: "</string>
+    <string name="portfolio_fragment_investments_text_asset">Asset</string>
+    <string name="portfolio_fragment_investments_text_price">Price</string>
+    <string name="portfolio_fragment_investments_text_TotalPrice">Total Price</string>
+    <string name="portfolio_fragment_add_investment_button">Add New Investment</string>
+    <string name="articles_bottom_navigation">Forum</string>
+    <string name="add_article_header">Add Article</string>
+    <string name="title_hint">Title</string>
+    <string name="category_hint">Category</string>
+    <string name="body_hint">Body</string>
+    <string name="post">Post</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="post_article_button">Post</string>
+    <string name="Searchbar_text">Search...</string>
+    <string name="price_chart_label">Instrument Price Chart</string>
+    <string name="login_failed">Login Failed</string>
+    <string name="register_success_message">Register succesful</string>
+    <string name="profile_bottom_navigation">Profile</string>
+    <string name="empty_email_error">The email field cannot be empty.</string>
+    <string name="empty_password_error">The password field cannot be empty.</string>
+    <string name="empty_name_error">The name field cannot be empty.</string>
+    <string name="empty_surname_error">The surname field cannot be empty.</string>
+    <string name="invalid_email_error">Please enter a valid email</string>
+</resources>

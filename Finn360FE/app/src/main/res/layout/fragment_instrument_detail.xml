@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.app_fragments.InstrumentDetailFragment"
+    android:orientation="vertical">
+<com.google.android.material.appbar.MaterialToolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:background="?attr/colorSurfaceVariant"
+    android:elevation="10dp"
+    >
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="deneme"
+        android:textSize="20sp"
+        android:id="@+id/instrumentTitleTextView"
+        android:textFontWeight="700"
+        android:layout_gravity="center"
+        />
+</com.google.android.material.appbar.MaterialToolbar>
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/stockChart"
+        android:padding="20dp"
+        />
+
+</LinearLayout>

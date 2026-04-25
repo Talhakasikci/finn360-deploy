@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.app_fragments.main_fragment"
+        android:label="fragment_main_fragment"
+        tools:layout="@layout/fragment_main_fragment" >
+        <action
+            android:id="@+id/action_main_fragment_to_instrumentDetailFragment"
+            app:destination="@id/instrumentDetailFragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_portfolio_fragment"
+            app:destination="@id/portfolio_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.login_fragments.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_main_fragment"
+            app:destination="@id/main_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.login_fragments.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_main_fragment"
+            app:destination="@id/main_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/portfolio_fragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.app_fragments.PortfolioFragment"
+        android:label="fragment_portfolio"
+        tools:layout="@layout/fragment_portfolio" >
+        <action
+            android:id="@+id/action_portfolio_fragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_portfolio_fragment_to_instrumentDetailFragment"
+            app:destination="@id/instrumentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.app_fragments.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" >
+        <action
+            android:id="@+id/action_articleFragment_to_addArticleFragment"
+            app:destination="@id/addArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addArticleFragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.app_fragments.AddArticleFragment"
+        android:label="fragment_add_article"
+        tools:layout="@layout/fragment_add_article" />
+    <fragment
+        android:id="@+id/instrumentDetailFragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.app_fragments.InstrumentDetailFragment"
+        android:label="fragment_instrument_detail"
+        tools:layout="@layout/fragment_instrument_detail" >
+        <argument
+            android:name="instrumentSymbol"
+            app:argType="string" />
+        <argument
+            android:name="instrumentId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.app_fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/addSymbolFragment"
+        android:name="com.talhakasikci.finn360fe.ui.fragments.app_fragments.AddSymbolFragment"
+        android:label="fragment_add_symbol"
+        tools:layout="@layout/fragment_add_symbol" >
+    </fragment>
+    <action
+        android:id="@+id/action_addSymbolFragment_to_instrumentDetailFragment"
+        app:destination="@id/instrumentDetailFragment" />
+</navigation>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Kök Öğeyi (Root Element) LinearLayout'tan RelativeLayout'a değiştirdik -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.app_fragments.ArticleFragment"
+    android:paddingHorizontal="20dp">
+
+    <!-- Başlık ve Toggle Grubu İçin Sabit Kapsayıcı (Header Container) -->
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/articles_bottom_navigation"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginVertical="10dp"
+            />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/articleToggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            android:layout_marginBottom="10dp"
+            android:checkedButton="@id/followingButton"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/followingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Takip Ettikleriniz"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:paddingHorizontal="16dp"
+                android:textColor="?attr/colorOnSurface"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/recentPostsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Son Paylaşımlar"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:paddingHorizontal="16dp"
+                android:textColor="?attr/colorOnSurface"
+                />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+
+    <!-- RecyclerView'ı başlık kapsayıcısının hemen altına yerleştirdik -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/articleFragmentRV"
+        android:layout_below="@id/headerContainer"
+        />
+
+    <!-- Floating Action Button'ı Ekledik (RelativeLayout içinde köşeye sabitledik) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPostFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+        android:src="@drawable/add_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+
+</RelativeLayout>
