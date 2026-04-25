@@ -6,7 +6,7 @@ on:
     # SADECE backend klasöründe bir değişiklik olursa bu pipeline çalışır.
     # Mobil tarafta yaptığın değişiklikler boşuna sunucu derlemesi başlatmaz.
     paths:
-      - 'backend/**' 
+      - 'Finn360BE/**' 
 
 jobs:
   build-and-test:
@@ -15,7 +15,7 @@ jobs:
     # Tüm "run" komutlarının varsayılan olarak bu klasörde çalışmasını sağlar
     defaults:
       run:
-        working-directory: ./backend
+        working-directory: ./Finn360BE
 
     steps:
     - name: Kodu Çek
