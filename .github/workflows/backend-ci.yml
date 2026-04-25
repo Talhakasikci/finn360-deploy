@@ -1,18 +1,15 @@
-name: Finn360 Backend CI
+name: Finn360 Backend CI/CD
 
 on:
   push:
     branches: [ "main", "master" ]
-    # SADECE backend klasöründe bir değişiklik olursa bu pipeline çalışır.
-    # Mobil tarafta yaptığın değişiklikler boşuna sunucu derlemesi başlatmaz.
     paths:
-      - 'finn360BE/**' 
+      - 'finn360BE/**'
 
 jobs:
-  build-and-test:
+  build-and-deploy:
     runs-on: ubuntu-latest
     
-    # Tüm "run" komutlarının varsayılan olarak bu klasörde çalışmasını sağlar
     defaults:
       run:
         working-directory: ./finn360BE
@@ -30,3 +27,15 @@ jobs:
 
     - name: Maven ile Derle (Testleri Atla)
       run: mvn clean package -DskipTests
+
+    - name: Docker Hub'a Giriş Yap
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Docker İmajını Oluştur ve Yükle
+      # "seninkullaniciadin/imajadi:latest" yapısını kendi bilgilerine göre düzenleyebilirsin
+      run: |
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/finn360-backend:latest .
+        docker push ${{ secrets.DOCKER_USERNAME }}/finn360-backend:latest
